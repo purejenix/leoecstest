@@ -34,7 +34,7 @@ namespace ECSTest.Client
 
             var filter = ecsWorld.Filter<PlayerComponent>().Inc<TargetComponent>().End();
             var playerPool = ecsWorld.GetPool<PlayerComponent>();
-            var playerTargetPool = ecsWorld.GetPool<TargetComponent>();
+            var targetPool = ecsWorld.GetPool<TargetComponent>();
             var gameData = ecsSystems.GetShared<GameData>();
             foreach (var entity in filter)
             {
@@ -42,12 +42,12 @@ namespace ECSTest.Client
                 playerComponent.PosX = playerPosition2d.x;
                 playerComponent.PosY = playerPosition2d.y;
 
-                ref var playerTarget = ref playerTargetPool.Get(entity);
+                ref var playerTarget = ref targetPool.Get(entity);
 
                 var diff = new Vector2(playerTarget.PosX, playerTarget.PosY) - playerPosition2d;
                 if (diff.magnitude < gameData.ProximityError)
                 {
-                    playerTargetPool.Del(entity);
+                    targetPool.Del(entity);
                     _playerController.move = Vector2.zero;
                 }
                 else

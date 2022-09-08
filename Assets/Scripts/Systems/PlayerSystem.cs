@@ -42,7 +42,12 @@ namespace ECSTest
                     {
                         playerComponent.PosX = targetComponent.PosX;
                         playerComponent.PosY = targetComponent.PosY;
+                        targetPool.Del(entity);
                     }
+                }
+                else
+                {
+                    targetPool.Del(entity);
                 }
             }
         }
