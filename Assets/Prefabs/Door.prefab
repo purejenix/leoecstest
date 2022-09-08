@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2341615310884479677}
-  - component: {fileID: -4510318981043067694}
+  - component: {fileID: 826766872387920347}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -127,7 +127,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-4510318981043067694
+--- !u!114 &826766872387920347
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,9 +136,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6289405528450093937}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c68304243c2fcf4da090092e286c752, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fafa29ad244ad84a80411b3610fe7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closingSpeed: 1
-  openingSpeed: 1
-  openHeight: 2
+  visual: {fileID: 68626667057476222}
